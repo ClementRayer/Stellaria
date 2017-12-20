@@ -13,19 +13,10 @@
   <body>
     <a-scene>
       <a-assets>
-        <a-mixin id="cube"
-                 geometry="primitive: box; height: 0.30; width: 0.30; depth: 0.30"
-                 material="color: #005E95;"></a-mixin>
-        <a-mixin id="cube-collided"
-                 material="color: #F2E646;"></a-mixin>
-        <a-mixin id="cube-grabbed"
-                 material="color: #F2E646;"></a-mixin>
+        <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/http://i.imgur.com/WqlqEkq.jpg" crossorigin="anonymous" />
       </a-assets>
-      <!-- Hands -->
-      <a-entity hand-controls="left" aabb-collider="objects: .cube;" grab></a-entity>
-      <a-entity hand-controls="right" aabb-collider="objects: .cube;" grab></a-entity>
 
-      <!-- A-Frame cubes -->
+      <!-- Planets -->
 
         <a-sphere position="9.220 7.648 0" radius="0.150" color="#EF2D5E"></a-sphere>
         <a-sphere position="-3.091 7.844 0" radius="0.410" color="#935e17"></a-sphere>
@@ -37,23 +28,28 @@
         <a-sphere position="47.674 6.982 0" radius="1.15" color="#4c599b"  ></a-sphere>
       <a-sphere position="-28.094 12.106 0" radius="10.070" color="#fee633"  ></a-sphere>
 
-
-      <a-ring position="27.782 30.965 0" color="teal" rotation="50.000 50.000 0" radius-inner="4.960" radius-outer="6.640"></a-ring>
-      <a-ring position="27.782 30.965 0" color="teal" rotation="50.000 50.000 0" scale="0.720 0.680 0.670" radius-inner="4.960" radius-outer="6.640"></a-ring>
-
+      <a-ring color="teal" rotation="50 0 0" radius-inner="1" radius-outer="2"></a-ring>
+      <a-ring color="teal" rotation="-50 180 0" radius-inner="1" radius-outer="2"></a-ring>
 
 
-        <!-- Environment -->
-        <a-entity id="sky"
-                  geometry="primitive: sphere; radius: 65;"
-                  material="shader: skyGradient; colorTop: #353449; colorBottom: #BC483E; side: back"></a-entity>
-         <a-entity ground></a-entity>
+      <!-- Saturne Rings -->
+      <a-ring position="27.782 7.921 0" color="teal" rotation="50.000 0 0" radius-inner="4.960" radius-outer="6.640"></a-ring>
+      <a-ring position="27.782 7.921 0" color="teal" rotation="-50.000 180 0" radius-inner="4.960" radius-outer="6.640"></a-ring>
+
+
+      <a-ring position="27.782 7.914 0" color="teal" rotation="50.000 0 0" scale="0.720 0.680 0.670" radius-inner="4.960" radius-outer="6.640"></a-ring>
+      <a-ring position="27.782 7.914 0" color="teal" rotation="-50.000 180 0" scale="0.720 0.680 0.670" radius-inner="4.960" radius-outer="6.640"></a-ring>
+
+
+
+      <!-- Environment -->
+      <a-sky src="#sky" rotation="0 -90 0"></a-sky>
          <a-entity light="type: point; color: #f4f4f4; intensity: 0.2; distance: 0" position="8 10 18"></a-entity>
          <a-entity light="type: point; color: #f4f4f4; intensity: 0.6; distance: 0" position="-8 10 -18"></a-entity>
          <a-entity light="type: ambient; color: #f4f4f4; intensity: 0.4;" position="-8 10 -18"></a-entity>
       </a-entity>
       <a-entity camera look-controls wasd-controls="fly: true">
-        <a-entity geometry="primitive: box; height: 0.02; width: 0.02" position="0 0 -1"
+        <!--<a-entity geometry="primitive: box; height: 0.02; width: 0.02" position="0 0 -1"
                   material="color: gray; opacity: 0.5"></a-entity>
       </a-entity>
 
