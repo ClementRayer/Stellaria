@@ -5,9 +5,6 @@
     <title>Planetarium</title>
     <meta name="description" content="Tracked Controls – A-Frame">
     <script src="aframe-master.js"></script>
-    <script src="components/aabb-collider.js"></script>
-    <script src="components/grab.js"></script>
-    <script src="components/ground.js"></script>
     <script src="shaders/skyGradient.js"></script>
   </head>
   <body>
@@ -17,48 +14,68 @@
       </a-assets>
 
       <!-- Planets -->
-
         <!-- Sun -->
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/soleil.jpg"
                 position="-28.094 12.106 0" radius="10.070"></a-sphere>
+      </a-entity>
         <!-- Mercury -->
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/mercure.jpg"
                   position="-8.446 7.722 0" radius="0.150"></a-sphere>
+      </a-entity>
         <!-- Venus -->
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/venus.jpg"
                   position="-3.091 7.844 0" radius="0.410"></a-sphere>
+      </a-entity>
         <!-- Earth -->
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/terre.jpg"
                   position="3.280 7.722 0" radius="0.410" rotation="0 30 0"></a-sphere>
+      </a-entity>
         <!-- Mars -->
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/mars.jpg"
                   position="9.220 7.648 0" radius="0.150"></a-sphere>
+      </a-entity>
         <!-- Jupiter -->
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/jupiter.jpg"
                   position="16.033 8.040 0" radius="3.150"></a-sphere>
+
+      </a-entity>
         <!-- Saturn -->
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/saturne.jpg"
                   position="27.681 8.040 0" radius="2.9"></a-sphere>
+        <!-- Rings -->
+        <!-- Inner Rings -->
+        <a-ring color="#353124"
+                position="27.782 7.914 0" rotation="50.000 0 0" radius-inner="3.5" radius-outer="4"></a-ring>
+        <a-ring color="#353124"
+                position="27.782 7.914 0" rotation="-50.000 180 0" radius-inner="3.5" radius-outer="4"></a-ring>
+        <!-- Mid Rings -->
+        <a-ring color="#6b634c"
+                position="27.782 7.921 0" rotation="50.000 0 0" radius-inner="4" radius-outer="5.5"></a-ring>
+        <a-ring color="#6b634c"
+                position="27.782 7.921 0" rotation="-50.000 180 0" radius-inner="4" radius-outer="5.5"></a-ring>
+        <!-- Outter Rings -->
+        <a-ring color="#423e30"
+                position="27.782 7.921 0" rotation="50.000 0 0" radius-inner="5.7" radius-outer="6.1"></a-ring>
+        <a-ring color="#423e30"
+                position="27.782 7.921 0" rotation="-50.000 180 0" radius-inner="5.7" radius-outer="6.1"></a-ring>
+      </a-entity>
         <!-- Uranus -->
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/uranus.png"
                 position="39.614 7.148 0" radius="1.25"></a-sphere>
+      </a-entity>
         <!-- Neptune -->
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/neptune.jpg"
                   position="47.674 6.982 0" radius="1.15"></a-sphere>
-
-
-      <!-- Saturn Rings -->
-        <!-- Inner Rings -->
-      <a-ring src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/saturn-rings.jpg"
-              position="27.782 7.914 0" rotation="50.000 0 0" scale="0.720 0.680 0.670" radius-inner="4.960" radius-outer="6.640"></a-ring>
-      <a-ring src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/saturn-rings.jpg"
-              position="27.782 7.914 0" rotation="-50.000 180 0" scale="0.720 0.680 0.670" radius-inner="4.960" radius-outer="6.640"></a-ring>
-        <!-- Outer Rings -->
-      <a-ring src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/saturn-rings.jpg"
-              position="27.782 7.921 0" rotation="50.000 0 0" radius-inner="4.960" radius-outer="6.640"></a-ring>
-      <a-ring src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/saturn-rings.jpg"
-              position="27.782 7.921 0" rotation="-50.000 180 0" radius-inner="4.960" radius-outer="6.640"></a-ring>
-
+      </a-entity>
 
 
       <!-- Environment -->
@@ -67,12 +84,10 @@
          <a-entity light="type: point; color: #f4f4f4; intensity: 0.6; distance: 0" position="-8 10 -18"></a-entity>
          <a-entity light="type: ambient; color: #f4f4f4; intensity: 0.4;" position="-8 10 -18"></a-entity>
       </a-entity>
-      <a-entity camera look-controls wasd-controls="fly: true">
+      <a-entity camera look-controls wasd-controls="fly: true; acceleration:250">
         <!--<a-entity geometry="primitive: box; height: 0.02; width: 0.02" position="0 0 -1"
                   material="color: gray; opacity: 0.5"></a-entity>-->
       </a-entity>
-
-
 
     </a-scene>
   </body>
