@@ -5,9 +5,14 @@
     <title>Planetarium</title>
     <meta name="description" content="Tracked Controls – A-Frame">
     <script src="aframe-master.js"></script>
-    <script src="shaders/skyGradient.js"></script>
+    <script src="aframe.min.js"></script>
+    <script src="components/animation-comp.js"></script>
   </head>
   <body>
+  <!--
+  <button id="go">Go</button>
+  <button id="init">Initial position</button>
+  -->
     <a-scene>
       <a-assets>
         <img id="sky" src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/background.png" crossorigin="anonymous" />
@@ -17,78 +22,142 @@
         <!-- Sun -->
       <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/soleil.jpg"
-                position="-28.094 12.106 0" radius="10.070"></a-sphere>
+                position="0 7 0" radius="10.070"></a-sphere>
       </a-entity>
         <!-- Mercury -->
-      <a-entity>
+      <a-entity id="move" animation="property: rotation;
+                  to: 0 360 0;
+                  easing: linear;
+                  dur: 880;
+                  loop: true;">
+                  <!--
+                  startEvents: rotation-start;
+                  pauseEvents: rotation-pause;
+                  resumeEvents: rotation-resume;
+                  restartEvents: rotation-restart
+                  -->
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/mercure.jpg"
-                  position="-8.446 7.722 0" radius="0.150"></a-sphere>
+                  position="20 7.722 0" radius="0.150"></a-sphere>
       </a-entity>
         <!-- Venus -->
-      <a-entity>
+      <a-entity id="alo" animation="property: rotation;
+                  to: 0 360 0;
+                  easing: linear;
+                  dur: 2240;
+                  loop: true;">
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/venus.jpg"
-                  position="-3.091 7.844 0" radius="0.410"></a-sphere>
+                  position="25 7.844 0" radius="0.410"></a-sphere>
       </a-entity>
         <!-- Earth -->
-      <a-entity>
+      <a-entity id="move" animation="property: rotation;
+                  to: 0 360 0;
+                  easing: linear;
+                  dur: 3650;
+                  loop: true;">
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/terre.jpg"
-                  position="3.280 7.722 0" radius="0.410" rotation="0 30 0"></a-sphere>
+                  position="31 7.722 0" radius="0.410" rotation="0 30 0"></a-sphere>
       </a-entity>
         <!-- Mars -->
-      <a-entity>
+      <a-entity id="move" animation="property: rotation;
+                  to: 0 360 0;
+                  easing: linear;
+                  dur: 6870;
+                  loop: true;">
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/mars.jpg"
-                  position="9.220 7.648 0" radius="0.150"></a-sphere>
+                  position="37 7.648 0" radius="0.150"></a-sphere>
       </a-entity>
         <!-- Jupiter -->
-      <a-entity>
+      <a-entity id="move" animation="property: rotation;
+                  to: 0 360 0;
+                  easing: linear;
+                  dur: 43330;
+                  loop: true;">
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/jupiter.jpg"
-                  position="16.033 8.040 0" radius="3.150"></a-sphere>
-
+                  position="44 8.040 0" radius="3.150"></a-sphere>
       </a-entity>
         <!-- Saturn -->
-      <a-entity>
+      <a-entity id="move" animation="property: rotation;
+                  to: 0 360 0;
+                  easing: linear;
+                  dur: 107590;
+                  loop: true;">
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/saturne.jpg"
-                  position="27.681 8.040 0" radius="2.9"></a-sphere>
+                  position="56 8.040 0" radius="2.9"></a-sphere>
         <!-- Rings -->
         <!-- Inner Rings -->
         <a-ring color="#353124"
-                position="27.782 7.914 0" rotation="50.000 0 0" radius-inner="3.5" radius-outer="4"></a-ring>
+                position="56 7.914 0" rotation="70.000 0 0" radius-inner="3.5" radius-outer="4"></a-ring>
         <a-ring color="#353124"
-                position="27.782 7.914 0" rotation="-50.000 180 0" radius-inner="3.5" radius-outer="4"></a-ring>
+                position="56 7.914 0" rotation="-70.000 180 0" radius-inner="3.5" radius-outer="4"></a-ring>
         <!-- Mid Rings -->
         <a-ring color="#6b634c"
-                position="27.782 7.921 0" rotation="50.000 0 0" radius-inner="4" radius-outer="5.5"></a-ring>
+                position="56 7.921 0" rotation="70.000 0 0" radius-inner="4" radius-outer="5.5"></a-ring>
         <a-ring color="#6b634c"
-                position="27.782 7.921 0" rotation="-50.000 180 0" radius-inner="4" radius-outer="5.5"></a-ring>
+                position="56 7.921 0" rotation="-70.000 180 0" radius-inner="4" radius-outer="5.5"></a-ring>
         <!-- Outter Rings -->
         <a-ring color="#423e30"
-                position="27.782 7.921 0" rotation="50.000 0 0" radius-inner="5.7" radius-outer="6.1"></a-ring>
+                position="56 7.921 0" rotation="70.000 0 0" radius-inner="5.7" radius-outer="6.1"></a-ring>
         <a-ring color="#423e30"
-                position="27.782 7.921 0" rotation="-50.000 180 0" radius-inner="5.7" radius-outer="6.1"></a-ring>
+                position="56 7.921 0" rotation="-70.000 180 0" radius-inner="5.7" radius-outer="6.1"></a-ring>
       </a-entity>
         <!-- Uranus -->
-      <a-entity>
+      <a-entity id="move" animation="property: rotation;
+                  to: 0 360 0;
+                  easing: linear;
+                  dur: 306850;
+                  loop: true;">
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/uranus.png"
-                position="39.614 7.148 0" radius="1.25"></a-sphere>
+                position="68 7.148 0" radius="1.25"></a-sphere>
       </a-entity>
         <!-- Neptune -->
-      <a-entity>
+      <a-entity id="move" animation="property: rotation;
+                  to: 0 360 0;
+                  easing: linear;
+                  dur: 601890;
+                  loop: true;">
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/neptune.jpg"
-                  position="47.674 6.982 0" radius="1.15"></a-sphere>
+                  position="76 6.982 0" radius="1.15"></a-sphere>
       </a-entity>
 
 
       <!-- Environment -->
-      <a-sky src="#sky" rotation="0 -90 0"></a-sky>
-         <a-entity light="type: point; color: #f4f4f4; intensity: 1; distance: 0" position="-28 12 0"></a-entity>
-         <a-entity light="type: point; color: #f4f4f4; intensity: 0.6; distance: 0" position="-8 10 -18"></a-entity>
-         <a-entity light="type: ambient; color: #f4f4f4; intensity: 0.4;" position="-8 10 -18"></a-entity>
-      </a-entity>
-      <a-entity camera look-controls wasd-controls="fly: true; acceleration:250">
-        <!--<a-entity geometry="primitive: box; height: 0.02; width: 0.02" position="0 0 -1"
-                  material="color: gray; opacity: 0.5"></a-entity>-->
+      <a-sky color="black" rotation="0 -90 0"></a-sky><!--src="#sky"-->
+      <a-entity light="type: point; color: #f4f4f4; intensity: 0.6; distance: 0" position="-8 10 -18"></a-entity>
+      <a-entity light="type: ambient; color: #f4f4f4; intensity: 0.4;" position="-16.961 20.080 -6.319"></a-entity>
+      <a-entity light="type: ambient; color: #f4f4f4; intensity: 0.4;" position="-8.542 17.392 -0.666"></a-entity>
+      <a-entity camera position="0 0 70" look-controls wasd-controls="fly: true; acceleration:250">
       </a-entity>
 
     </a-scene>
+  <!--
+  <script>
+      var currentEvent = "rotation-start";
+
+      document.querySelector("#go").addEventListener("click", function() {
+          document.getElementById("move").emit(currentEvent);
+          switch (currentEvent) {
+              case "rotation-start":
+              case "rotation-restart":
+              case "rotation-resume":
+                  this.textContent = "Pause";
+                  currentEvent = "rotation-pause";
+                  break;
+              case "rotation-pause":
+                  this.textContent = "Resume";
+                  currentEvent = "rotation-resume";
+                  break;
+          }
+      });
+
+      document.getElementById("init").addEventListener("click", function() {
+          document.getElementById("move").emit("rotation-pause");
+          document.getElementById("move").setAttribute("rotation", "0 0 0");
+          document.getElementById("alo").emit("rotation-pause");
+          document.getElementById("alo").setAttribute("rotation", "0 0 0");
+          currentEvent = "rotation-restart";
+          document.querySelector("#go").textContent = "Go";
+      });
+  </script>
+  -->
   </body>
 </html>
