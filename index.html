@@ -25,11 +25,7 @@
                 position="0 7 0" radius="10.070"></a-sphere>
       </a-entity>
         <!-- Mercury -->
-      <a-entity id="move" animation="property: rotation;
-                  to: 0 360 0;
-                  easing: linear;
-                  dur: 880;
-                  loop: true;">
+      <a-entity>
                   <!--
                   startEvents: rotation-start;
                   pauseEvents: rotation-pause;
@@ -38,49 +34,69 @@
                   -->
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/mercure.jpg"
                   position="20 7.722 0" radius="0.150"></a-sphere>
+          <a-animation attribute="rotation"
+                       dur="880"
+                       fill="forwards"
+                       to="0 360 0"
+                       repeat="indefinite"
+                       begin="0"
+                       easing="linear"
+          ></a-animation>
       </a-entity>
         <!-- Venus -->
-      <a-entity id="alo" animation="property: rotation;
-                  to: 0 360 0;
-                  easing: linear;
-                  dur: 2240;
-                  loop: true;">
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/venus.jpg"
                   position="25 7.844 0" radius="0.410"></a-sphere>
+          <a-animation attribute="rotation"
+                       dur="2240"
+                       fill="forwards"
+                       to="0 360 0"
+                       repeat="indefinite"
+                       begin="0"
+                       easing="linear"
+          ></a-animation>
       </a-entity>
         <!-- Earth -->
-      <a-entity id="move" animation="property: rotation;
-                  to: 0 360 0;
-                  easing: linear;
-                  dur: 3650;
-                  loop: true;">
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/terre.jpg"
                   position="31 7.722 0" radius="0.410" rotation="0 30 0"></a-sphere>
+          <a-animation attribute="rotation"
+                       dur="3650"
+                       fill="forwards"
+                       to="0 360 0"
+                       repeat="indefinite"
+                       begin="0"
+                       easing="linear"
+          ></a-animation>
       </a-entity>
         <!-- Mars -->
-      <a-entity id="move" animation="property: rotation;
-                  to: 0 360 0;
-                  easing: linear;
-                  dur: 6870;
-                  loop: true;">
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/mars.jpg"
                   position="37 7.648 0" radius="0.150"></a-sphere>
+          <a-animation attribute="rotation"
+                       dur="6870"
+                       fill="forwards"
+                       to="0 360 0"
+                       repeat="indefinite"
+                       begin="0"
+                       easing="linear"
+          ></a-animation>
       </a-entity>
         <!-- Jupiter -->
-      <a-entity id="move" animation="property: rotation;
-                  to: 0 360 0;
-                  easing: linear;
-                  dur: 43330;
-                  loop: true;">
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/jupiter.jpg"
                   position="44 8.040 0" radius="3.150"></a-sphere>
+          <a-animation attribute="rotation"
+                       dur="43330"
+                       fill="forwards"
+                       to="0 360 0"
+                       repeat="indefinite"
+                       begin="0"
+                       easing="linear"
+          ></a-animation>
       </a-entity>
         <!-- Saturn -->
-      <a-entity id="move" animation="property: rotation;
-                  to: 0 360 0;
-                  easing: linear;
-                  dur: 107590;
-                  loop: true;">
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/saturne.jpg"
                   position="56 8.040 0" radius="2.9"></a-sphere>
         <!-- Rings -->
@@ -99,24 +115,40 @@
                 position="56 7.921 0" rotation="70.000 0 0" radius-inner="5.7" radius-outer="6.1"></a-ring>
         <a-ring color="#423e30"
                 position="56 7.921 0" rotation="-70.000 180 0" radius-inner="5.7" radius-outer="6.1"></a-ring>
+          <a-animation attribute="rotation"
+                       dur="107590"
+                       fill="forwards"
+                       to="0 360 0"
+                       repeat="indefinite"
+                       begin="0"
+                       easing="linear"
+          ></a-animation>
       </a-entity>
         <!-- Uranus -->
-      <a-entity id="move" animation="property: rotation;
-                  to: 0 360 0;
-                  easing: linear;
-                  dur: 306850;
-                  loop: true;">
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/uranus.png"
                 position="68 7.148 0" radius="1.25"></a-sphere>
+          <a-animation attribute="rotation"
+                       dur="306850"
+                       fill="forwards"
+                       to="0 360 0"
+                       repeat="indefinite"
+                       begin="0"
+                       easing="linear"
+          ></a-animation>
       </a-entity>
         <!-- Neptune -->
-      <a-entity id="move" animation="property: rotation;
-                  to: 0 360 0;
-                  easing: linear;
-                  dur: 601890;
-                  loop: true;">
+      <a-entity>
         <a-sphere src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/neptune.jpg"
                   position="76 6.982 0" radius="1.15"></a-sphere>
+          <a-animation attribute="rotation"
+                       dur="601890"
+                       fill="forwards"
+                       to="0 360 0"
+                       repeat="indefinite"
+                       begin="0"
+                       easing="linear"
+          ></a-animation>
       </a-entity>
 
 
@@ -125,7 +157,25 @@
       <a-entity light="type: point; color: #f4f4f4; intensity: 0.6; distance: 0" position="-8 10 -18"></a-entity>
       <a-entity light="type: ambient; color: #f4f4f4; intensity: 0.4;" position="-16.961 20.080 -6.319"></a-entity>
       <a-entity light="type: ambient; color: #f4f4f4; intensity: 0.4;" position="-8.542 17.392 -0.666"></a-entity>
-      <a-entity camera position="0 0 70" look-controls wasd-controls="fly: true; acceleration:250">
+      <a-entity camera position="-80 30 80" rotation="0 -30 0" look-controls wasd-controls="fly: true; acceleration:250">
+          <a-animation attribute="position"
+                       dur="20000"
+                       fill="forwards"
+                       from="-80 30 110"
+                       to="60 20 40"
+                       repeat="indefinite"
+                       begin="0"
+                       easing="linear"
+          ></a-animation>
+          <a-animation attribute="rotation"
+                       dur="20000"
+                       fill="forwards"
+                       from="0 -30 0"
+                       to="0 40 0"
+                       repeat="indefinite"
+                       begin="0"
+                       easing="linear"
+          ></a-animation>
       </a-entity>
 
     </a-scene>
