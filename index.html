@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Stellaria</title>
+    <link rel="icon" type="image/png" href="images/logo.png"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
-<a href="enfant.html">Enfant</a>
-<a href="adulte.html">Adulte</a>
+<body id="home">
+<div class="presentation">
+    <img src="images/logo.png" alt="Logo Stellaria" id="logo">
+    <h1 id="nom">STELLARIA</h1>
+    <h3 id="discover">Découvrez l'univers dans lequel vous vivez en réalité virtuelle</h3>
+    <p id="choix">Êtes vous un :</p>
+</div>
+<div class="container">
+    <div class="row" id="links">
+        <div class="offset-2 sm-offset-2 col-3 col-md-3" id="kids">
+            <h2><a href="enfant.html" class="lien">Petit terrien</a></h2>
+            <p class="description">Un univers rempli d'anecdotes pour les petits explorateurs.</p>
+        </div>
+        <div class="offset-2 sm-offset-2 col-3 col-md-3" id="adultes">
+            <h2><a href="adulte.html" class="lien">Grand terrien</a></h2>
+            <p class="description">Une expérience avec des informations plus détaillées pour les explorateurs confirmés.</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>

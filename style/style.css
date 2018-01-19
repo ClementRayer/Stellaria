@@ -6,9 +6,86 @@
     font-style: normal;
 }
 
-.description{
-    font: leixodemo;
+@font-face {
+    font-family: 'kaleko';
+    src: url('fonts/kaleko-205-w00-book-webfont.woff2') format('woff2'),
+    url('fonts/kaleko-205-w00-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#home{
+    background-image: url('../images/homebackground.jpg');
+}
+
+.presentation{
+    width: 100%;
+    height: 100%;
+    margin-top: 4vh;
+    text-align: center;
+}
+
+#logo{
+    width: 22vw;
+    height: auto;
+}
+
+#nom{
+    margin-top: 4vh;
+    font-family: leixodemo;
+    font-size: 5vw;
+}
+
+#discover{
+    margin-top: 3vh;
+    font-family: kaleko;
+    font-size: 2vw;
+}
+
+#choix{
+    margin-top: 4vh;
+    font-family: kaleko;
+    font-size: 1.5vw;
+}
+
+#links{
+    text-align: center;
+    font-family: kaleko;
+    margin-top: 3vh;
+}
+
+.lien{
+    padding: 10px;
+    font-size: 2.4vw;
+    border-radius: 5px;
+    border: solid 2px #ffffff;
+    transition: ease-in 0.4s;
+}
+
+.lien:hover{
     color: #000;
+    background-color: #ffffff;
+    transition: ease-out 0.5s;
+}
+
+.description{
+    font-size: 1.2vw;
+    margin-top: 5vh;
 }
 
 #animcontrols{
