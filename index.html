@@ -16,9 +16,6 @@
   <button id="go">Go</button>
   <button id="init">Initial position</button>
     <a-scene>
-      <a-assets>
-        <img id="sky" src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/background.png" crossorigin="anonymous" />
-      </a-assets>
       <!-- Planets -->
         <!-- Sun -->
       <a-entity>
@@ -27,8 +24,10 @@
                   event-set__click="_event: click; _target: #sun; visible: true"
                   event-set__mouseleave="_event: mouseleave; _target: #sun; visible: false">
             <a-entity id="sun" visible="false">
-                <a-plane visible="true" position="-50 0 50" rotation="0 45 0" width="45" height="45" material="#000"></a-plane>
-                <a-plane visible="true" position="-50 0 50" rotation="0 225 0" width="45" height="45" material="#000"></a-plane>
+                <a-plane visible="true" position="-55 0 55" rotation="0 45 0" width="67" height="45"
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/soleil_a.png"></a-plane>
+                <a-plane visible="true" position="-55 0 55" rotation="0 225 0" width="67" height="45"
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/soleil_a.png"></a-plane>
             </a-entity>
         </a-sphere>
       </a-entity>
@@ -47,9 +46,9 @@
                   event-set__click="_event: click; _target: #mercury; visible: true"
                   event-set__mouseleave="_event: mouseleave; _target: #mercury; visible: false">
             <a-entity id="mercury" visible="false">
-                <a-plane visible="true" position="-1.5 0 1" rotation="0 25 0" height="1.6" width="2.8"
+                <a-plane visible="true" position="-1.5 0 1" rotation="0 25 0" height="1.6" width="2.4"
                          src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
-                <a-plane visible="true" position="-1.5 0 1" rotation="0 200 0" height="1.6" width="2.8"
+                <a-plane visible="true" position="-1.5 0 1" rotation="0 200 0" height="1.6" width="2.4"
                          src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
             </a-entity>
         </a-sphere>
@@ -71,9 +70,9 @@
                   event-set__mouseleave="_event: mouseleave; _target: #venus; visible: false">
             <a-entity id="venus" visible="false">
                 <a-plane visible="true" position="-2 0 1.5" rotation="0 25 0" height="2" width="3.2"
-                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/venus_a.png"></a-plane>
                 <a-plane visible="true" position="-2 0 1.5" rotation="0 200 0" height="2" width="3.2"
-                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/venus_a.png"></a-plane>
             </a-entity>
         </a-sphere>
       </a-entity>
@@ -92,10 +91,10 @@
                   event-set__click="_event: click; _target: #earth; visible: true"
                   event-set__mouseleave="_event: mouseleave; _target: #earth; visible: false">
             <a-entity id="earth" visible="false">
-                <a-plane visible="true" position="-2 0 1.5" rotation="0 25 0" height="2" width="3.2"
-                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
-                <a-plane visible="true" position="-2 0 1.5" rotation="0 200 0" height="2" width="3.2"
-                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
+                <a-plane visible="true" position="-2 0 1.3" rotation="0 25 0" height="2" width="3.2"
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/terre_a.png"></a-plane>
+                <a-plane visible="true" position="-2 0 1.3" rotation="0 200 0" height="2" width="3.2"
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/terre_a.png"></a-plane>
             </a-entity>
         </a-sphere>
       </a-entity>
@@ -114,10 +113,10 @@
                   event-set__click="_event: click; _target: #mars; visible: true"
                   event-set__mouseleave="_event: mouseleave; _target: #mars; visible: false">
             <a-entity id="mars" visible="false">
-                <a-plane visible="true" position="-1.8 0 1.3" rotation="0 25 0" height="1.8" width="3"
-                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
-                <a-plane visible="true" position="-1.8 0 1.3" rotation="0 200 0" height="1.8" width="3"
-                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
+                <a-plane visible="true" position="-1.8 0 1" rotation="0 25 0" height="1.8" width="3"
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mars_a.png"></a-plane>
+                <a-plane visible="true" position="-1.8 0 1" rotation="0 200 0" height="1.8" width="3"
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mars_a.png"></a-plane>
             </a-entity>
         </a-sphere>
       </a-entity>
@@ -136,10 +135,10 @@
                   event-set__click="_event: click; _target: #jupiter; visible: true"
                   event-set__mouseleave="_event: mouseleave; _target: #jupiter; visible: false">
             <a-entity id="jupiter" visible="false">
-                <a-plane visible="true" position="-7 0 7" rotation="0 45 0" width="5" height="5"
-                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
-                <a-plane visible="true" position="-7 0 7" rotation="0 225 0" width="5" height="5"
-                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
+                <a-plane visible="true" position="-8 0 8" rotation="0 45 0" width="7.5" height="5"
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/jupiter_a.png"></a-plane>
+                <a-plane visible="true" position="-8 0 8" rotation="0 225 0" width="7.5" height="5"
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/jupiter_a.png"></a-plane>
             </a-entity>
         </a-sphere>
       </a-entity>
@@ -158,10 +157,10 @@
                   event-set__click="_event: click; _target: #saturn; visible: true"
                   event-set__mouseleave="_event: mouseleave; _target: #saturn; visible: false">
             <a-entity id="saturn" visible="false">
-                <a-plane visible="true" position="-5 0 9" rotation="0 45 0" width="5" height="5"
-                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
-                <a-plane visible="true" position="-5 0 9" rotation="0 225 0" width="5" height="5"
-                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
+                <a-plane visible="true" position="-5 0 10" rotation="0 45 0" width="7.5" height="5"
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/saturne_a.png"></a-plane>
+                <a-plane visible="true" position="-5 0 10" rotation="0 225 0" width="7.5" height="5"
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/saturne_a.png"></a-plane>
             </a-entity>
         </a-sphere>
         <!-- Rings -->
@@ -196,10 +195,10 @@
                   event-set__click="_event: click; _target: #uranus; visible: true"
                   event-set__mouseleave="_event: mouseleave; _target: #uranus; visible: false">
             <a-entity id="uranus" visible="false">
-                <a-plane visible="true" position="-3.8 0 3.8" rotation="0 45 0" width="4" height="4"
-                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
-                <a-plane visible="true" position="-3.8 0 3.8" rotation="0 225 0" width="4" height="4"
-                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
+                <a-plane visible="true" position="-4.3 0 4.3" rotation="0 45 0" width="6" height="4"
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/uranus_a.png"></a-plane>
+                <a-plane visible="true" position="-4.3 0 4.3" rotation="0 225 0" width="6" height="4"
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/uranus_a.png"></a-plane>
             </a-entity>
         </a-sphere>
       </a-entity>
@@ -218,21 +217,21 @@
                   event-set__click="_event: click; _target: #neptune; visible: true"
                   event-set__mouseleave="_event: mouseleave; _target: #neptune; visible: false">
             <a-entity id="neptune" visible="false">
-                <a-plane visible="true" position="-3.5 0 3.5" rotation="0 45 0" width="3.8" height="3.8"
-                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
-                <a-plane visible="true" position="-3.5 0 3.5" rotation="0 225 0" width="3.8" height="3.8"
-                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/mercure_a.png"></a-plane>
+                <a-plane visible="true" position="-4 0 4" rotation="0 45 0" width="5" height="3.8"
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/neptune_a.png"></a-plane>
+                <a-plane visible="true" position="-4 0 4" rotation="0 225 0" width="5" height="3.8"
+                         src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/panels/neptune_a.png"></a-plane>
             </a-entity>
         </a-sphere>
       </a-entity>
 
 
       <!-- Environment -->
-      <a-sky color="black" rotation="0 -90 0"></a-sky><!--src="#sky"-->
+      <a-sky src="https://raw.githubusercontent.com/ClementRayer/Planetarium/origin/textures/background.png" rotation="0 -90 0"></a-sky><!--src="#sky"-->
       <a-entity light="type: point; color: #f4f4f4; intensity: 0.6; distance: 0" position="-8 10 -18"></a-entity>
       <a-entity light="type: ambient; color: #f4f4f4; intensity: 0.4;" position="-16.961 20.080 -6.319"></a-entity>
       <a-entity light="type: ambient; color: #f4f4f4; intensity: 0.4;" position="-8.542 17.392 -0.666"></a-entity>
-      <a-entity camera position="20 30 100" rotation="-4 -13 0" look-controls="" wasd-controls="fly: true; acceleration:500" visible="true">
+      <a-entity camera position="20 30 200" rotation="-4 -13 0" look-controls="" wasd-controls="fly: true; acceleration:500" visible="true">
         <a-cursor fuse="true" color="white" position="0 0 -1" rotation="0 0 0" scale="1 1 1" visible="true"
                   material="color:white;shader:flat;opacity:0.8"
                   geometry="primitive:ring;radiusOuter:0.016;radiusInner:0.01;segmentsTheta:64"></a-cursor>
