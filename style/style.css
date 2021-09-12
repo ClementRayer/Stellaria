@@ -18,8 +18,30 @@ body {
     padding-top: 7vh;
     background-image: url('../images/homebackground.jpg');
     background-size: cover;
+    font-family: 'kaleko';
     color: #ffffff;
     text-align: center;
+}
+#disclaimer{
+    display: none;
+    position: absolute;
+    z-index: 10;
+    padding: 1vh 0;
+    width: 80vw;
+    background-color: #000000;
+}
+#disclaimer-title{
+    font-family: 'leixodemo';
+    font-size: 2.5rem;
+}
+#disclaimer-button{
+    margin-top: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 2px;
+    line-height: 1.7;
+    text-decoration: none;
 }
 #welcome{
     margin-bottom: 0;
@@ -52,6 +74,7 @@ h2 a{
     padding: 7px 10px;
     border: 1px solid #ffffff;
     border-radius: 3px;
+    white-space: nowrap;
 }
 h2 a:hover{
     color: #000000;
@@ -63,61 +86,66 @@ h2 a:hover{
     margin-top: 30px;
     font-size: 1.25rem;
 }
-
-/* 
-.presentation{
-    width: 100%;
-    height: 100%;
-    margin-top: 4vh;
-    text-align: center;
+@media screen and (max-width: 1025px){
+    #disclaimer{
+        display: flex;
+        margin: 60vh 10vw 0 10vw;
+    }
+    #logo{
+        max-height: 30vh;
+        margin: 6vh 0;
+    }
+    #choix{
+        margin: 5vh 0;
+    }
+    .description{
+        font-size: 1rem;
+    }
 }
-
-#logo{
-    width: 22vw;
-    height: auto;
+@media screen and (max-width: 1024px) and (min-width: 1000px){
+    #disclaimer{
+        margin-top: 58vh;
+    }
 }
-
-#nom{
-    margin-top: 4vh;
-    font-family: leixodemo;
-    font-size: 5vw;
+@media screen and (max-width: 768px){
+    h2{
+        font-size: 1.5rem;
+    }
 }
-
-#discover{
-    margin-top: 3vh;
-    font-family: kaleko;
-    font-size: 2vw;
+@media screen and (max-width: 400px){
+    #home{
+        padding: 4vh 4vw 0 4vw;
+    }
+    #welcome{
+        font-size: 1.1rem;
+    }
+    #logo{
+        margin: 3vh 0;
+    }
+    #discover{
+        font-size: 1.1rem;
+    }
+    #choix{
+        margin: 2vh 0;
+        font-size: 1rem;
+    }
+    #links{
+        flex-direction: column;
+    }
+    .links-child{
+        max-width: 100%;
+        margin-top: 15px;
+    }
+    .description{
+        margin-top: 15px;
+    }
+    #disclaimer{
+        width: 90vw;
+        margin: 46vh 5vw 0 1vw;
+        padding: 3vh 5vw;
+        font-size: 0.9rem;
+    }
+    #disclaimer-title{
+        font-size: 1.5rem;
+    }
 }
-
-#choix{
-    margin-top: 4vh;
-    font-family: kaleko;
-    font-size: 1.5vw;
-}
-
-#links{
-    text-align: center;
-    font-family: kaleko;
-    margin-top: 3vh;
-}
-
-.lien{
-    padding: 10px;
-    font-size: 2.4vw;
-    border-radius: 5px;
-    border: solid 2px #ffffff;
-    transition: ease-in 0.4s;
-}
-
-.lien:hover{
-    color: #000;
-    background-color: #ffffff;
-    transition: ease-out 0.5s;
-}
-
-.description{
-    font-size: 1.2vw;
-    margin-top: 5vh;
-}
-
- */
